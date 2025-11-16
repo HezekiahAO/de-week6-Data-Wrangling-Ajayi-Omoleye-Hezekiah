@@ -57,12 +57,3 @@ def load_data_from_local_fault():
         print(f'Faults',df)
 load_data_from_local_fault()
 
-
-# Cleaning functions
-def clean_service_data(df):
-        # Example cleaning steps
-        df = df.dropna()  # Remove missing values
-        df['service_date'] = pd.to_datetime(df['service_date'])  # Convert to datetime
-        return df
-
-print("Data cleaning functions defined.", clean_service_data(df=pd.DataFrame('service_date')))
